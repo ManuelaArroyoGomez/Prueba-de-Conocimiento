@@ -1,4 +1,4 @@
-# Prueba de Conocimiento – Full Stack
+# 🔍 Prueba de Conocimiento – Full Stack
 
 Este repositorio contiene los entregables solicitados:
 
@@ -103,6 +103,7 @@ Ejecutar: python code.py
 **Replicación Diseño Web**
 <div style="page-break-after: always;"></div>
 Abrir directamente en navegador: diseno_web/index.html
+<div style="page-break-after: always;"></div>
 
 **Instalación Local de Moodle**
 <div style="page-break-after: always;"></div>

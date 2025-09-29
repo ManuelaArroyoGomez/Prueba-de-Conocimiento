@@ -74,7 +74,7 @@ cd Prueba-de-Conocimiento
 
 ### 4) Base de Datos
 - Inicia MySQL y conéctate
-- Ejecuta: sql/crud_queries.sql y analyticsdb.sql
+- Ejecuta: sql/crud_queries.sql y Analytics/analyticsdb.sql
 - Verifica que existe la vista del reporte (o crea la vista): SELECT * FROM vw_reporte_clientes ORDER BY total DESC;
 
 ### 5) Inicio y instalacción de dependencias

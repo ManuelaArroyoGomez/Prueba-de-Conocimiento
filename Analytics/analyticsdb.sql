@@ -45,15 +45,73 @@ CREATE TABLE IF NOT EXISTS DetallesPedidos (
 ) ENGINE=InnoDB;
 
 -- Insertar valores a las tablas
-INSERT INTO clientes (nombre, email, telefono) 
-VALUES ('Andrea Ramirez',  'andre@ejemplo.com','3104556782');
-INSERT INTO productos (nombre, precio) 
-VALUES('TV SAMSUNG 50" Pulgadas', 250.00);
-INSERT INTO pedidos (cliente_id, fecha_pedido)
-SELECT id, CURDATE() FROM clientes WHERE email='andre@ejemplo.com';
-SET @p_andre := LAST_INSERT_ID();
+INSERT INTO Clientes (nombre, email, telefono) 
+VALUES ('Manuela Arroyo',  'manu@ejemplo.com',     '30014777128'),
+	   ('Juan Pérez',      'juanperez@mail.com',   '3001234567'),
+	   ('María Gómez',     'mariagomez@mail.com',  '3109876543'),
+       ('Carlos Ramírez',  'carlosramirez@mail.com','3112223344'),
+       ('Ana Torres',      'anatorres@mail.com',   '3156789012'),
+       ('Pedro Sánchez',   'pedrosanchez@mail.com','3124445566'),
+       ('Laura Herrera',   'lauraherrera@mail.com','3201112233'),
+       ('Jorge Castillo',  'jorgecastillo@mail.com','3019871234'),
+       ('Sofía López',     'sofialopez@mail.com',  '3176667788'),
+       ('Rafael Valencia', 'rafa@ejemplo.com',     '3001234567');
+       
+INSERT INTO Productos (nombre, precio) 
+VALUES ('AirPods Pro 3',                   199.90),
+	   ('Laptop Lenovo ThinkPad',         3500.00),
+       ('Smartphone Samsung Galaxy S21',  2800.00),
+       ('Monitor LG 24”',                  900.00),
+       ('Teclado Mecánico Redragon',       250.00),
+       ('Mouse Logitech MX Master 3',      400.00),
+       ('Audífonos Sony WH-1000XM4',      1200.00),
+       ('Tablet Apple iPad Air',          2300.00),
+       ('Disco Duro Externo 1TB',          500.00),
+       ('Impresora HP DeskJet',            850.00),
+       ('Smartwatch Xiaomi',               650.00),
+       ('Iphone 17 Pro',                   999.90);
+       
+INSERT INTO Pedidos (cliente_id, fecha_pedido)
+SELECT id, CURDATE() FROM Clientes WHERE email='manu@ejemplo.com';
+SET @p_manu := LAST_INSERT_ID();
 INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
-SELECT @p_andre, id, 1 FROM productos WHERE nombre='TV SAMSUNG 50" Pulgadas';
+SELECT @p_manu, id, 1 FROM Productos WHERE nombre='AirPods Pro 3';
+
+INSERT INTO Pedidos (cliente_id, fecha_pedido)
+SELECT id, CURDATE() FROM clientes WHERE email='mariagomez@mail.com';
+SET @p_maria := LAST_INSERT_ID();
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_maria, id, 1 FROM Productos WHERE nombre='Laptop Lenovo ThinkPad';
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_maria, id, 1 FROM Productos WHERE nombre='Teclado Mecánico Redragon';
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_maria, id, 1 FROM Productos WHERE nombre='Smartwatch Xiaomi';
+
+INSERT INTO Pedidos (cliente_id, fecha_pedido)
+SELECT id, CURDATE() FROM Clientes WHERE email='carlosramirez@mail.com';
+SET @p_carlos := LAST_INSERT_ID();
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_carlos, id, 2 FROM Productos WHERE nombre='Monitor LG 24”';
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_carlos, id, 1 FROM Productos WHERE nombre='Disco Duro Externo 1TB';
+
+INSERT INTO Pedidos (cliente_id, fecha_pedido)
+SELECT id, CURDATE() FROM Clientes WHERE email='lauraherrera@mail.com';
+SET @p_laura := LAST_INSERT_ID();
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_laura, id, 1 FROM Productos WHERE nombre='Audífonos Sony WH-1000XM4';
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_laura, id, 1 FROM Productos WHERE nombre='Impresora HP DeskJet';
+
+INSERT INTO Pedidos (cliente_id, fecha_pedido)
+SELECT id, CURDATE() FROM Clientes WHERE email='jorgecastillo@mail.com';
+SET @p_jorge := LAST_INSERT_ID();
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_jorge, id, 1 FROM Productos WHERE nombre='Tablet Apple iPad Air';
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_jorge, id, 1 FROM Productos WHERE nombre='Mouse Logitech MX Master 3';
+INSERT INTO DetallesPedidos (pedido_id, producto_id, cantidad)
+SELECT @p_jorge, id, 1 FROM Productos WHERE nombre='Teclado Mecánico Redragon';
 
 -- Consulta del reporte
 SELECT 

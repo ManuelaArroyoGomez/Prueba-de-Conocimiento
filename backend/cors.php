@@ -1,5 +1,4 @@
 <?php
-// cors.php
 $dotenv = parse_ini_file(__DIR__ . '/.env', false, INI_SCANNER_RAW);
 $origin = $dotenv['CORS_ORIGIN'] ?? '*';
 

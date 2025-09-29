@@ -1,0 +1,5 @@
+DB_HOST= 'HostName'
+DB_PORT= 'Port'
+DB_USER= 'Username'
+DB_PASS= 'Password'
+DB_NAME=testdb      

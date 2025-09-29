@@ -65,6 +65,7 @@ Este repositorio contiene los entregables solicitados:
 ├── sql/
 │   └── crud_queries.sql
 └── README.md
+```
 
 ### 3) Clonar el repositorio
 ```bash

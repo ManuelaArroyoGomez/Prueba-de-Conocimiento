@@ -101,7 +101,9 @@ pip install mysql-connector-python
 Ejecutar: python code.py
 
 **Replicación Diseño Web**
+<div style="page-break-after: always;"></div>
 Abrir directamente en navegador: diseno_web/index.html
 
 **Instalación Local de Moodle**
-Explicación completa con capturas en /evidencias_moodle
+<div style="page-break-after: always;"></div>
+Explicación completa con capturas en evidencias_moodle/

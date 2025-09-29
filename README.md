@@ -29,11 +29,10 @@ Este repositorio contiene los entregables solicitados:
 **Analisis de datos (SQL + Python)**
 - SQL v8.0.40 y python v3.12.6
 
+**Instalación Local de Moodle**
+- Docker + Docker Compose
+
 ### 2) Estructura esperada
-
-2) Estructura esperada
-
-2) Estructura esperada
 
 ```plaintext
 ├── Analytics/
@@ -78,34 +77,46 @@ cd Prueba-de-Conocimiento
 - Ejecuta: sql/crud_queries.sql y analyticsdb.sql
 - Verifica que existe la vista del reporte (o crea la vista): SELECT * FROM vw_reporte_clientes ORDER BY total DESC;
 
-
 ### 5) Inicio y instalacción de dependencias
 
 **Backend**
+<div style="page-break-after: always;"></div>
+Variables de entorno: Copia .env.example → .env en la carpeta backend/ y completar la informacion.
+<div style="page-break-after: always;"></div>
+
+Iniciar servidor PHP
 ```bash
 php -S localhost:8080 -t backend
 ```
 API base: http://localhost:8080/api/items.php
 
 **Frontend**
+<div style="page-break-after: always;"></div>
+
+Instalación y despliegue
 ```bash
 npm install 
 npm run dev
 ```
-URL: http://localhost:5173
+Accede en: http://localhost:5173
 
 **Analisis de datos**
+<div style="page-break-after: always;"></div>
+Variables de entorno: Copia .env.example → .env en la carpeta Analytics/ y completar la informacion.
+<div style="page-break-after: always;"></div>
+
+Instalación
 ```bash
 pip install mysql-connector-python
 ```
-Ejecutar
+Ejecutar análisis
 ```bash
 python code.py
 ```
 
 **Replicación Diseño Web**
 <div style="page-break-after: always;"></div>
-Abrir directamente en navegador: diseno_web/index.html
+Abrir index.html en el navegador o usar Live Server en VSCode.
 <div style="page-break-after: always;"></div>
 
 **Instalación Local de Moodle**

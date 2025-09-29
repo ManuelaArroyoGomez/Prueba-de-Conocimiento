@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS analyticsdb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE analyticsdb;
 
 -- Tabla de clientes

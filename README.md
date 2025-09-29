@@ -80,11 +80,9 @@ cd Prueba-de-Conocimiento
 ### 5) Inicio y instalacción de dependencias
 
 **Backend**
-<div style="page-break-after: always;"></div>
-Variables de entorno: Copia .env.example → .env en la carpeta backend/ y completar la informacion.
-<div style="page-break-after: always;"></div>
+- Variables de entorno: Copia .env.example → .env en la carpeta backend/ y completar la informacion.
 
-Iniciar servidor PHP
+- Iniciar servidor PHP
 ```bash
 php -S localhost:8080 -t backend
 ```
@@ -101,15 +99,14 @@ npm run dev
 Accede en: http://localhost:5173
 
 **Analisis de datos**
-<div style="page-break-after: always;"></div>
-Variables de entorno: Copia .env.example → .env en la carpeta Analytics/ y completar la informacion.
-<div style="page-break-after: always;"></div>
 
-Instalación
+- Variables de entorno: Copia .env.example → .env en la carpeta Analytics/ y completar la informacion.
+
+- Instalación
 ```bash
 pip install mysql-connector-python
 ```
-Ejecutar análisis
+- Ejecutar análisis
 ```bash
 python code.py
 ```

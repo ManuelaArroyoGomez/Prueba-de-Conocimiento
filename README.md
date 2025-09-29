@@ -31,34 +31,46 @@ Este repositorio contiene los entregables solicitados:
 
 ### 2) Estructura esperada
 
-├─ backend/ 
-│  ├─ api/items.php
-│  ├─ db.php
-│  ├─ cors.php
-│  └─ .env
-├─ frontend/
-│  ├─ src/
-│  │  ├─ components
-│  |  │  └─ App.jsx
-│  │  ├─ main.jsx
-│  │  └─ api.js
-│  ├─ index.css
-│  └─ styles.css
-├─ sql/
-│  └─ crud_queries.sql
-├─ analytics/
-│  ├─ code.py
-│  ├─ .env
-│  └─ analyticsdb.sql
-├─ diseno_web/ 
-│  ├─ index.html
-│  ├─ style.css
-│  └─ Assets/
-└─ README.md
+2) Estructura esperada
+
+2) Estructura esperada
+
+```plaintext
+├── Analytics/
+│   ├── code.py
+│   ├── .env.example
+│   └── analyticsdb.sql
+├── backend/
+│   ├── api/
+│   │   └── items.php
+│   ├── cors.php
+│   ├── db.php
+│   └── .env.example
+├── Diseno Web/
+│   ├── index.html
+│   ├── style.css
+│   └── Assets/
+├── evidencias_moodle/
+│   ├── configuracion.pdf
+│   └── vesion3.8.txt
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── App.jsx
+│   │   ├── main.jsx
+│   │   └── api.js
+│   ├── styles.css
+│   ├── index.css
+│   └── vite.config.js          
+├── sql/
+│   └── crud_queries.sql
+└── README.md
 
 ### 3) Clonar el repositorio
+```bash
 git clone <URL_DEL_REPOSITORIO>
 cd Prueba-de-Conocimiento
+```
 
 ### 4) Base de Datos
 - Inicia MySQL y conéctate
@@ -89,3 +101,6 @@ Ejecutar: python code.py
 
 **Replicación Diseño Web**
 Abrir directamente en navegador: diseno_web/index.html
+
+**Instalación Local de Moodle**
+Explicación completa con capturas en /evidencias_moodle

@@ -98,7 +98,10 @@ URL: http://localhost:5173
 ```bash
 pip install mysql-connector-python
 ```
-Ejecutar: python code.py
+Ejecutar
+```bash
+python code.py
+```
 
 **Replicación Diseño Web**
 <div style="page-break-after: always;"></div>
